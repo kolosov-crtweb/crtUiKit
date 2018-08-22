@@ -4,10 +4,11 @@ $primary-color: #000000;
 $background-color: #ffffff;
 $border-color: rgba($color: $background-color, $alpha: 0.1);
 $border-radius: 10px;
+$border-top: 1px solid rgba($color: $background-color, $alpha: 0.3);
 body {
     font: 100% $font-stack;
     color: $primary-color;
-    background: linear-gradient(45deg, #EECFBA, #C5DDE8) no-repeat;
+    background: linear-gradient(45deg, #45d14c, #696eaa) no-repeat;
 }
 
 .card {
@@ -31,7 +32,7 @@ body {
     vertical-align: middle;
     font-weight: bold;
     @include headerColor(#696EAA);
-    border-top: 1px solid rgba($color: $background-color, $alpha: 0.3);
+    border-top: $border-top;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
     height: 50px;
@@ -43,4 +44,24 @@ body {
 
 .card__auth {
     height: 400px;
+}
+
+input {
+    border-radius: $border-radius;
+    background-color: rgba($color: $background-color, $alpha: 0.4);
+    border-top: $border-top;
+    border: none;
+    color: black;
+    width: 200px;
+    height: 50px;
+    margin: 30px;
+    color: white;
+    font-size: 14pt;
+    padding: 5px;
+}
+
+input[type="email"]::before {
+    content: "Email";
+    color: white;
+    font-size: 18pt;
 }

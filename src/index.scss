@@ -1,7 +1,46 @@
-$font-stack:    Helvetica, sans-serif;
+$font-stack: Helvetica,
+sans-serif;
 $primary-color: #000000;
-
+$background-color: #ffffff;
+$border-color: rgba($color: $background-color, $alpha: 0.1);
+$border-radius: 10px;
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+    font: 100% $font-stack;
+    color: $primary-color;
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8) no-repeat;
+}
+
+.card {
+    width: 350px;
+    height: 100%;
+    background-color: rgba($color: $background-color, $alpha: 0.4);
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin headerColor($color) {
+    background: $color;
+}
+
+.card__header {
+    color: $background-color;
+    font-size: 16Pt;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    @include headerColor(#696EAA);
+    border-top: 1px solid rgba($color: $background-color, $alpha: 0.3);
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    height: 50px;
+    line-height: 55px;
+    margin-top: -1px;
+    margin-left: -1px;
+    margin-right: -1px;
+}
+
+.card__auth {
+    height: 400px;
 }

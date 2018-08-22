@@ -3,13 +3,45 @@
   <head></head>
   <style>body {
   font: 100% Helvetica, sans-serif;
-  color: #000000; }
+  color: #000000;
+  background: linear-gradient(45deg, #EECFBA, #C5DDE8) no-repeat; }
+
+.card {
+  width: 350px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; }
+
+.card__header {
+  color: #ffffff;
+  font-size: 16Pt;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  background: #696EAA;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 50px;
+  line-height: 55px;
+  margin-top: -1px;
+  margin-left: -1px;
+  margin-right: -1px; }
+
+.card__auth {
+  height: 400px; }
 
   </style>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <title>gulp</title>
   <body>
-    <h1>Хеллоу)</h1>
+    <div class="card">
+      <div class="card__header">LOGIN</div>
+      <div class="card__auth"></div>
+    </div>
   </body>
 </html>

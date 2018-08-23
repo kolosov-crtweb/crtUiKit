@@ -5,7 +5,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 0.8fr));
   grid-template-rows: 50% 50%;
   grid-gap: 15px 15px;
-  background: linear-gradient(45deg, #45d14c, #696eaa) no-repeat; }
+  background: linear-gradient(45deg, #baa1a4, #180f1a) no-repeat; }
 
 .card {
   width: 300px;
@@ -34,29 +34,26 @@ body {
 .card__auth {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   margin-top: 1px;
-  height: 400px; }
+  padding-top: 32px;
+  height: auto; }
 
 input {
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
   border: none;
-  color: black;
-  width: 200px;
-  height: 50px;
-  margin: 30px;
   color: white;
   font-size: 14pt;
-  padding: 5px; }
+  width: 250px;
+  height: 60px;
+  border-radius: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.101961); }
 
-input[type="email"]::before {
-  content: "Email";
-  color: white;
-  font-size: 18pt; }
+input:focus {
+  background-color: rgba(255, 255, 255, 0.6); }
 
-/**
-width: 300px;
-height: 326px;
-background-color: rgba(255,255,255,0.10196078431372549);
-border: 1px solid rgba(255,255,255,0.3);
-*/
+.caption-input {
+  color: white; }
+
+.input-container {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 22px; }

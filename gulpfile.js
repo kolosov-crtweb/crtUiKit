@@ -1,6 +1,16 @@
 var gulp = require('gulp');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
+var browserSync = require('browser-sync');
+
+gulp.task('browserSync', function () {
+    browserSync({
+        server: {
+            baseDir: 'dist/'
+        },
+        notify: false
+    })
+});
 
 gulp.task('sync', function (cb) {
     setTimeout(function () {
@@ -22,12 +32,9 @@ gulp.task('pug', ['sync', 'sass'], function buildHTML() {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('sass:watch', function () {
-    gulp.watch('./sass/**/*.scss', ['sass']);
-});
-
-gulp.task('pug:watch', function () {
-    gulp.watch('./sass/**/*.pug', ['pug']);
-});
-
 gulp.task('default', ['sass', 'pug']);
+
+gulp.task('watch', ['browserSync', 'default'], function () {
+    gulp.watch('src/*.scss', ['default']);
+    gulp.watch('src/*.pug', ['pug']);
+})

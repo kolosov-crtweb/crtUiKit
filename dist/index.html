@@ -4,16 +4,18 @@
   <style>body {
   font: 100% Helvetica, sans-serif;
   color: #000000;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 0.8fr));
+  grid-template-rows: 50% 50%;
+  grid-gap: 15px 15px;
   background: linear-gradient(45deg, #45d14c, #696eaa) no-repeat; }
 
 .card {
-  width: 350px;
+  width: 300px;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column; }
+  border-radius: 10px; }
 
 .card__header {
   color: #ffffff;
@@ -52,16 +54,41 @@ input[type="email"]::before {
   color: white;
   font-size: 18pt; }
 
+/**
+width: 300px;
+height: 326px;
+background-color: rgba(255,255,255,0.10196078431372549);
+border: 1px solid rgba(255,255,255,0.3);
+*/
+
   </style>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <title>gulp</title>
   <body>
     <div class="card">
-      <div class="card__header">LOGIN</div>
-      <div class="card__auth">
-        <input type="email">
-      </div>
+      <div class="card__header">1</div>
+      <div class="card__auth"></div>
+    </div>
+    <div class="card">
+      <div class="card__header">2</div>
+      <div class="card__auth"></div>
+    </div>
+    <div class="card">
+      <div class="card__header">3</div>
+      <div class="card__auth"></div>
+    </div>
+    <div class="card">
+      <div class="card__header">4</div>
+      <div class="card__auth"></div>
+    </div>
+    <div class="card">
+      <div class="card__header">5</div>
+      <div class="card__auth"></div>
+    </div>
+    <div class="card">
+      <div class="card__header">6</div>
+      <div class="card__auth"></div>
     </div>
   </body>
 </html>

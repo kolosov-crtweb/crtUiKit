@@ -5,20 +5,23 @@ $background-color: #ffffff;
 $border-color: rgba($color: $background-color, $alpha: 0.1);
 $border-radius: 10px;
 $border-top: 1px solid rgba($color: $background-color, $alpha: 0.3);
+$grid-columns: 470px;
 body {
     font: 100% $font-stack;
     color: $primary-color;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 0.8fr));
+    grid-template-rows: 50% 50%;
+    grid-gap: 15px 15px;
     background: linear-gradient(45deg, #45d14c, #696eaa) no-repeat;
 }
 
 .card {
-    width: 350px;
+    width: 300px;
     height: 100%;
     background-color: rgba($color: $background-color, $alpha: 0.4);
     border: 1px solid $border-color;
     border-radius: $border-radius;
-    display: flex;
-    flex-direction: column;
 }
 
 @mixin headerColor($color) {
@@ -65,3 +68,10 @@ input[type="email"]::before {
     color: white;
     font-size: 18pt;
 }
+
+/**
+width: 300px;
+height: 326px;
+background-color: rgba(255,255,255,0.10196078431372549);
+border: 1px solid rgba(255,255,255,0.3);
+*/

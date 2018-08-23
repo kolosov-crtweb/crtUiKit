@@ -24,13 +24,16 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  height: 50px;
+  height: 60px;
   line-height: 55px;
   margin-top: -1px;
   margin-left: -1px;
-  margin-right: -1px; }
+  margin-right: -1px;
+  box-shadow: 0.5px 0.866px 0px rgba(35, 47, 124, 0.54); }
 
 .card__auth {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 1px;
   height: 400px; }
 
 input {

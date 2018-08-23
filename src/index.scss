@@ -38,14 +38,17 @@ body {
     border-top: $border-top;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
-    height: 50px;
+    height: 60px;
     line-height: 55px;
     margin-top: -1px;
     margin-left: -1px;
     margin-right: -1px;
+    box-shadow: 0.5px 0.866px 0px rgba(35, 47, 124, 0.54);
 }
 
 .card__auth {
+    border-top: $border-top;
+    margin-top: 1px;
     height: 400px;
 }
 

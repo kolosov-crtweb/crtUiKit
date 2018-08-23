@@ -21,7 +21,8 @@ gulp.task('sync', function (cb) {
 gulp.task('sass', function () {
     return gulp.src('./src/**/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist'))
+        .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('pug', ['sync', 'sass'], function buildHTML() {
@@ -29,7 +30,8 @@ gulp.task('pug', ['sync', 'sass'], function buildHTML() {
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist'))
+        .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('default', ['sass', 'pug']);

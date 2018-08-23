@@ -13,7 +13,7 @@
 .card {
   width: 300px;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px; }
 
@@ -58,8 +58,22 @@ input:focus {
 
 .input-container {
   display: grid;
-  justify-content: center;
-  margin-bottom: 22px; }
+  margin-bottom: 22px;
+  justify-content: center; }
+
+.or-text {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin-left: 28px;
+  margin-right: 28px; }
+
+.or-text:before,
+.or-text:after {
+  content: "";
+  flex: 0.5 0.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  margin: auto; }
 
   </style>
   <meta charset="utf-8">
@@ -77,7 +91,7 @@ input:focus {
           <div class="caption-input">Password</div>
           <input type="password">
         </div>
-        <hr>
+        <div class="or-text">  Or  </div>
       </div>
     </div>
   </body>

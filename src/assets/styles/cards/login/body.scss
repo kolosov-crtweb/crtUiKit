@@ -1,0 +1,54 @@
+@import '../../mixins.scss';
+@import '../../variables.scss';
+.login__body {
+    border-top: $border-top;
+    margin-top: 1px;
+    padding-top: 32px;
+    height: auto;
+}
+
+.input-container {
+    display: grid;
+    margin-bottom: 22px;
+    justify-content: center;
+    color: #ffffff;
+}
+
+
+.login-input {
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 14pt;
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+    border-top: $border-top;
+    background-color: rgba(255, 255, 255, 0.10196078431372549);
+}
+
+.login-input:focus {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.login-input:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+.or-text {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-size: 0.7em;
+    margin-left: 28px;
+    margin-right: 28px;
+}
+
+.or-text:before,
+.or-text:after {
+    content: "";
+    flex: 0.5 0.5;
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.7);
+    margin: auto;
+}

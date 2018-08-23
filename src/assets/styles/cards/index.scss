@@ -1,0 +1,8 @@
+@import '../variables.scss';
+@import './login/login-card.scss';
+.card {
+    width: 300px;
+    background-color: rgba($color: $background-color, $alpha: 0.2);
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+}

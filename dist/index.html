@@ -1,24 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head></head>
-  <style>body {
-  font: 100% Helvetica, sans-serif;
-  color: #000000;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 0.8fr));
-  grid-template-rows: 50% 50%;
-  grid-gap: 15px 15px;
-  min-height: 100%;
-  background: linear-gradient(to top right, #170e19, #9f6aa1, #d4a6aa) no-repeat; }
-
-.card {
-  width: 300px;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px; }
-
-.card__header {
+  <style>@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+.login__header {
   color: #ffffff;
   font-size: 16Pt;
   display: flex;
@@ -36,13 +20,19 @@
   margin-right: -1px;
   box-shadow: 0.5px 0.866px 0px rgba(35, 47, 124, 0.54); }
 
-.card__auth {
+.login__body {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   margin-top: 1px;
   padding-top: 32px;
   height: auto; }
 
-input {
+.input-container {
+  display: grid;
+  margin-bottom: 22px;
+  justify-content: center;
+  color: #ffffff; }
+
+.login-input {
   outline: none;
   border: none;
   color: white;
@@ -53,19 +43,11 @@ input {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.101961); }
 
-input:focus {
+.login-input:focus {
   background-color: rgba(255, 255, 255, 0.6); }
 
-input:hover {
+.login-input:hover {
   background-color: rgba(255, 255, 255, 0.6); }
-
-.caption-input {
-  color: white; }
-
-.input-container {
-  display: grid;
-  margin-bottom: 22px;
-  justify-content: center; }
 
 .or-text {
   display: flex;
@@ -123,21 +105,35 @@ svg {
 .google:hover > svg {
   color: #dd3f21; }
 
+.card {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px; }
+
+body {
+  font: 100% Roboto, sans-serif;
+  color: #000000;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 0.8fr));
+  grid-template-rows: 50% 50%;
+  grid-gap: 15px 15px;
+  min-height: 100%;
+  background: linear-gradient(to top right, #170e19, #9f6aa1, #d4a6aa); }
+
   </style>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <title>gulp</title>
   <body>
     <div class="card">
-      <div class="card__header">LOGIN</div>
-      <div class="card__auth">
-        <div class="input-container">
-          <div class="caption-input">Email</div>
-          <input type="email">
+      <div class="login__header">LOGIN</div>
+      <div class="login__body">
+        <div class="input-container">Email
+          <input class="login-input" type="email">
         </div>
-        <div class="input-container">
-          <div class="caption-input">Password</div>
-          <input type="password">
+        <div class="input-container">Password
+          <input class="login-input" type="password">
         </div>
         <div class="or-text">  Or  </div>
         <div class="login-footer">
@@ -151,5 +147,6 @@ svg {
         </div>
       </div>
     </div>
+    <div class="card"></div>
   </body>
 </html>

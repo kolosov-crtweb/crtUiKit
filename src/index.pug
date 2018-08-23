@@ -8,14 +8,12 @@ html
     title gulp
     body
         .card
-            .card__header LOGIN
-            .card__auth
-                .input-container
-                    .caption-input Email
-                    input(type="email")
-                .input-container
-                    .caption-input Password
-                    input(type="password")
+            .login__header LOGIN
+            .login__body
+                .input-container Email
+                    input(type="email" class="login-input")
+                .input-container Password
+                    input(type="password" class="login-input")
                 .or-text   Or  
                 .login-footer
                     .social-icon.twitter
@@ -24,4 +22,5 @@ html
                         include assets/img/google-plus-g-brands.svg
                     .social-icon.facebook
                         include assets/img/facebook-f-brands.svg
+        .card
                         

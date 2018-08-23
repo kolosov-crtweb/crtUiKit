@@ -13,7 +13,8 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(300px, 0.8fr));
     grid-template-rows: 50% 50%;
     grid-gap: 15px 15px;
-    background: linear-gradient(45deg, #baa1a4, #180f1a) no-repeat;
+    min-height: 100%;
+    background: linear-gradient(to top right, #170e19, #9f6aa1, #d4a6aa) no-repeat;
 }
 
 .card {
@@ -54,6 +55,7 @@ body {
 }
 
 input {
+    outline: none;
     border: none;
     color: white;
     font-size: 14pt;
@@ -82,6 +84,7 @@ input:focus {
     display: flex;
     flex-direction: row;
     color: white;
+    font-size: 0.7em;
     margin-left: 28px;
     margin-right: 28px;
 }
@@ -92,4 +95,17 @@ input:focus {
     flex: 0.5 0.5;
     border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.7);
     margin: auto;
+}
+
+.login-footer {
+    background-color: rgba($color: #ffffff, $alpha: 0.4);
+    ;
+    height: 60px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: -3px;
+    margin-left: -1px;
+    margin-right: -1px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }

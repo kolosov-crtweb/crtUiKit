@@ -2,7 +2,7 @@
     background: $color;
 }
 
-@mixin bycicleAlign {
+@mixin bycicleAlign() {
     display: flex;
     justify-content: space-evenly;
     align-items: center;

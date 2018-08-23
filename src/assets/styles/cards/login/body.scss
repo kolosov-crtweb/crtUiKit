@@ -1,5 +1,6 @@
 @import '../../mixins.scss';
 @import '../../variables.scss';
+$input-active-color: rgba(255, 255, 255, 0.6);
 .login__body {
     border-top: $border-top;
     margin-top: 1px;
@@ -11,37 +12,39 @@
     display: grid;
     margin-bottom: 22px;
     justify-content: center;
-    color: #ffffff;
+    color: $font-color;
 }
 
+.input-container>span {
+    margin-bottom: 5px;
+}
 
 .login-input {
     outline: none;
     border: none;
-    color: white;
+    color: $font-color;
     padding-left: 10px;
-    font-size: 1.2em;
+    font-size: 1em;
     width: 250px;
     height: 60px;
-    border-radius: 10px;
+    border-radius: $border-radius;
     border-top: $border-top;
-    background-color: rgba(255, 255, 255, 0.10196078431372549);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .login-input:focus {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: $input-active-color
 }
 
 .login-input:hover {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: $input-active-color
 }
-
 
 .or-text {
     display: flex;
     flex-direction: row;
-    color: white;
-    font-size: 0.7em;
+    color: $font-color;
+    font-size: 0.9em;
     margin-left: 28px;
     margin-right: 28px;
 }
@@ -50,6 +53,6 @@
 .or-text:after {
     content: "";
     flex: 0.5 0.5;
-    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.7);
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.4);
     margin: auto;
 }

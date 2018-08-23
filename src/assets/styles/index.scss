@@ -32,8 +32,9 @@ body {
 .card__header {
     color: $background-color;
     font-size: 16Pt;
-    text-align: center;
-    vertical-align: middle;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     font-weight: bold;
     @include headerColor(#696EAA);
     border-top: $border-top;
@@ -70,6 +71,10 @@ input:focus {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
+input:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
 .caption-input {
     color: white;
 }
@@ -98,6 +103,9 @@ input:focus {
 }
 
 .login-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: rgba($color: #ffffff, $alpha: 0.4);
     ;
     height: 60px;
@@ -108,4 +116,37 @@ input:focus {
     margin-left: -1px;
     margin-right: -1px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    box-shadow: 0.5px 0.866px 0px rgba(156, 132, 168, 0.4);
+    border: 2px solid #ffffff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-icon:hover {
+    background-color: white;
+}
+
+svg {
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+
+.facebook:hover>svg {
+    color: #3b579d;
+}
+
+.twitter:hover>svg {
+    color: #00a9f1;
+}
+
+.google:hover>svg {
+    color: #dd3f21;
 }

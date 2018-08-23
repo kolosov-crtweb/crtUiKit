@@ -7,14 +7,21 @@ html
     meta(name='viewport', content="initial-scale=1.0, width=device-width")
     title gulp
     body
-        div(class='card')
-            div(class='card__header') LOGIN
-            div(class='card__auth')
-                div(class="input-container")
-                    div(class="caption-input") Email
+        .card
+            .card__header LOGIN
+            .card__auth
+                .input-container
+                    .caption-input Email
                     input(type="email")
-                div(class="input-container")
-                    div(class="caption-input") Password
+                .input-container
+                    .caption-input Password
                     input(type="password")
-                div(class="or-text")   Or  
-                div(class="login-footer")
+                .or-text   Or  
+                .login-footer
+                    .social-icon.twitter
+                        include assets/img/twitter-brands.svg
+                    .social-icon.google
+                        include assets/img/google-plus-g-brands.svg
+                    .social-icon.facebook
+                        include assets/img/facebook-f-brands.svg
+                        

@@ -19,10 +19,10 @@ gulp.task('sync', function (cb) {
 });
 
 gulp.task('sass', function () {
-    return gulp.src('./src/**/*.scss')
+    return gulp.src('src/assets/styles/**/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(gulp.dest('dist'))
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('pug', ['sync', 'sass'], function buildHTML() {
@@ -37,6 +37,6 @@ gulp.task('pug', ['sync', 'sass'], function buildHTML() {
 gulp.task('default', ['sass', 'pug']);
 
 gulp.task('watch', ['browserSync', 'default'], function () {
-    gulp.watch('src/*.scss', ['default']);
+    gulp.watch('src/assets/styles/**/*.scss', ['default']);
     gulp.watch('src/*.pug', ['pug']);
 })

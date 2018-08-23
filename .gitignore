@@ -1,3 +1,5 @@
 node_modules
 dist
 .vscode
+dist/index.css
+dist/index.html

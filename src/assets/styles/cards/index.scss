@@ -3,7 +3,7 @@
 @import './download/download-card.scss';
 .card {
     width: $card-width;
-    background-color: rgba($color: $background-color, $alpha: 0.2);
+    background-color: rgba($color: $background-color, $alpha: 0.1);
     border: 1px solid $border-color;
     border-radius: $border-radius;
     display: flex;

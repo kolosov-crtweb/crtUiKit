@@ -4,11 +4,11 @@
 body {
     font: 100% $font-stack;
     color: $primary-color;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 0.8fr));
-    grid-template-rows: 50% 50%;
-    grid-gap: 15px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
     background: linear-gradient(to top right, #170e19, #9f6aa1, #d4a6aa) no-repeat;
 }
 

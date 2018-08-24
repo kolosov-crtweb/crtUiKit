@@ -1,0 +1,6 @@
+@import '../header.scss';
+@import '../../mixins.scss';
+.card-header__download {
+    @extend .card-header;
+    @include headerColor(#668f7a);
+}

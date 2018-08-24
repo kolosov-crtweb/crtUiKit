@@ -8,14 +8,14 @@ html
     title gulp
     body
         .card
-            .login__header LOGIN
+            .card-header__login LOGIN
             .login__body
                 .input-container 
-                    span Email
-                    input(type="email" class="login-input")
+                    label(for="email") Email
+                    input(id="email" type="email" class="login-input")
                 .input-container 
-                    span Password
-                    input(type="password" class="login-input")
+                    label(for="password") Password
+                    input(id="password" type="password" class="login-input")
                 .or-text   Or  
                 .login-footer
                     .social-icon.twitter
@@ -24,4 +24,12 @@ html
                         include assets/img/google-plus-g-brands.svg
                     .social-icon.facebook
                         include assets/img/facebook-f-brands.svg
-                        
+        .card
+            .card-header__download DOWNLOAD
+            .body__download
+                .main-circle
+                    .cloud-circle
+                        include assets/img/from-cloud.svg
+                .text-container
+                    .percents 52%
+                    .state Complete...

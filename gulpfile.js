@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
+var plumber = require('gulp-plumber');
 
 gulp.task('browserSync', function () {
     browserSync({
@@ -21,12 +22,14 @@ gulp.task('sync', function (cb) {
 gulp.task('sass', function () {
     return gulp.src('src/assets/styles/**/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
+        .pipe(plumber())
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('pug', ['sync', 'sass'], function buildHTML() {
     return gulp.src('src/*.pug')
+        .pipe(plumber())
         .pipe(pug({
             pretty: true
         }))

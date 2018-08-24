@@ -2,30 +2,32 @@
 <html>
   <head></head>
   <style>@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
-.login__header {
+.card-header, .card-header__login, .card-header__download {
   color: #ffffff;
   font-size: 1.2em;
   font-weight: bold;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: #696EAA;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   height: 55px;
   padding-top: 5px;
   line-height: 55px;
-  margin-top: -1px;
-  margin-left: -1px;
-  margin-right: -1px;
+  margin: -1px -1px 0 -1px;
   box-shadow: 0px 1px 0px rgba(35, 47, 124, 0.54); }
+
+.card-header__login {
+  background: #696EAA; }
 
 .login__body {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   margin-top: 1px;
   padding-top: 32px;
-  height: auto; }
+  height: auto;
+  display: flex;
+  flex-direction: column; }
 
 .input-container {
   display: grid;
@@ -33,14 +35,13 @@
   justify-content: center;
   color: #ffffff; }
 
-.input-container > span {
+.input-container > label {
   margin-bottom: 5px; }
 
 .login-input {
   outline: none;
   border: none;
   color: #ffffff;
-  padding-left: 10px;
   font-size: 1em;
   width: 250px;
   height: 60px;
@@ -110,20 +111,83 @@ svg {
 .google:hover > svg {
   color: #dd3f21; }
 
+.card-header, .card-header__login, .card-header__download {
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 55px;
+  padding-top: 5px;
+  line-height: 55px;
+  margin: -1px -1px 0 -1px;
+  box-shadow: 0px 1px 0px rgba(35, 47, 124, 0.54); }
+
+.card-header__download {
+  background: #668f7a; }
+
+.body__download {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px 60px 45px 60px;
+  color: #ffffff; }
+  .body__download .main-circle {
+    width: 164px;
+    height: 164px;
+    border-radius: 82px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px; }
+  .body__download .cloud-circle {
+    width: 96px;
+    height: 96px;
+    border-radius: 48px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .body__download .cloud-circle:hover {
+    background: rgba(255, 255, 255, 0.2); }
+  .body__download .cloud-circle > svg {
+    width: 60px;
+    height: 50px; }
+  .body__download .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .body__download .text-container .percents {
+      font-size: 1.5em; }
+    .body__download .text-container .state {
+      font-size: 1em; }
+
 .card {
   width: 300px;
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px; }
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; }
 
 body {
   font: 100% Roboto, sans-serif;
   color: #000000;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 0.8fr));
-  grid-template-rows: 50% 50%;
-  grid-gap: 15px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
   background: linear-gradient(to top right, #170e19, #9f6aa1, #d4a6aa) no-repeat; }
 
 html body {
@@ -135,13 +199,15 @@ html body {
   <title>gulp</title>
   <body>
     <div class="card">
-      <div class="login__header">LOGIN</div>
+      <div class="card-header__login">LOGIN</div>
       <div class="login__body">
-        <div class="input-container"> <span>Email</span>
-          <input class="login-input" type="email">
+        <div class="input-container"> 
+          <label for="email">Email</label>
+          <input class="login-input" id="email" type="email">
         </div>
-        <div class="input-container"> <span>Password</span>
-          <input class="login-input" type="password">
+        <div class="input-container"> 
+          <label for="password">Password</label>
+          <input class="login-input" id="password" type="password">
         </div>
         <div class="or-text">  Or  </div>
         <div class="login-footer">
@@ -152,6 +218,59 @@ html body {
     <path fill="currentColor" d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path>
 </svg>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header__download">DOWNLOAD</div>
+      <div class="body__download">
+        <div class="main-circle">
+          <div class="cloud-circle"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" width="512px" height="512px">
+<g>
+	<g>
+		<polygon points="18,13.5 14,13.5 14,21.5 11,21.5 16,27.5 21,21.5 18,21.5   " fill="#FFFFFF"/>
+		<path d="M27.586,12.712C26.66,10.251,24.284,8.5,21.5,8.5c-0.641,0-1.26,0.093-1.846,0.266    C18.068,6.205,15.233,4.5,12,4.5c-4.904,0-8.894,3.924-8.998,8.803C1.207,14.342,0,16.283,0,18.5c0,3.312,2.688,6,6,6h4.5    l-1.667-2H5.997C3.794,22.5,2,20.709,2,18.5c0-1.893,1.317-3.482,3.087-3.896C5.029,14.245,5,13.876,5,13.5c0-3.866,3.134-7,7-7    c3.162,0,5.834,2.097,6.702,4.975c0.769-0.611,1.739-0.975,2.798-0.975c2.316,0,4.225,1.75,4.473,4h0.03    c2.203,0,3.997,1.791,3.997,4c0,2.205-1.789,4-3.997,4h-2.836l-1.667,2H26c3.312,0,6-2.693,6-6    C32,15.735,30.13,13.407,27.586,12.712z" fill="#FFFFFF"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+          </div>
+        </div>
+        <div class="text-container">
+          <div class="percents">52%</div>
+          <div class="state">Complete...</div>
         </div>
       </div>
     </div>

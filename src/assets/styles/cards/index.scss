@@ -1,6 +1,9 @@
 @import '../variables.scss';
 @import './login/login-card.scss';
 @import './download/download-card.scss';
+@import './location/location-card.scss';
+@import './profile/profile-card.scss';
+
 .card {
     width: $card-width;
     background-color: rgba($color: $background-color, $alpha: 0.1);
@@ -8,5 +11,5 @@
     border-radius: $border-radius;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
-

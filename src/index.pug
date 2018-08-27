@@ -3,6 +3,8 @@ html
     head
     style
         include ../dist/index.css
+    script.
+        var buttonClick = function(){console.log('button click')}
     meta(charset = 'utf-8')
     meta(name='viewport', content="initial-scale=1.0, width=device-width")
     title gulp
@@ -25,6 +27,13 @@ html
                     .social-icon.facebook
                         include assets/img/facebook-f-brands.svg
         .card
+            .card-header__profile profile
+            .profile-header
+                img.background-photo(src=("/img/bg.png"))
+                image.profile-photo(src="")
+                .profile-name John Doe
+                .profile-location New York, NY
+        .card
             .card-header__download DOWNLOAD
             .body__download
                 .main-circle
@@ -33,3 +42,12 @@ html
                 .text-container
                     .percents 52%
                     .state Complete...
+        .card
+            .card-header__location LOCATION
+            ul
+                li.location San Francisco
+        .button-container
+            button(onclick='buttonClick()') Button
+            button.button-primary(onclick='buttonClick()') Button
+            button.button-info(onclick='buttonClick()') Button
+            button.button-success(onclick='buttonClick()') Button

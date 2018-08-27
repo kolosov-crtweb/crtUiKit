@@ -1,6 +1,7 @@
 @import '../variables.scss';
 @import '../mixins.scss';
 .card-header {
+    text-transform: uppercase;
     color: $background-color;
     font-size: 1.2em;
     font-weight: bold;

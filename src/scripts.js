@@ -1,0 +1,1 @@
+function commonButtonClick() { window.alert('Нажата common button') }

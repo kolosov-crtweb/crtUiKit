@@ -22,10 +22,11 @@ $input-active-color: rgba(255, 255, 255, 0.6);
 }
 
 .login-input {
+    padding-left: 10px;
     outline: none;
     border: none;
     color: $font-color;
-    font-size: 1em;
+    font-size: 1.2em;
     width: 250px;
     height: 60px;
     border-radius: $border-radius;

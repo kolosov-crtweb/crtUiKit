@@ -7,6 +7,7 @@
     background-color: rgba($color: $background-color, $alpha: 0.3);
     ;
     height: 60px;
+    width: $card-width;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
     margin-top: 20px;

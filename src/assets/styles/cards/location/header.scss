@@ -1,0 +1,6 @@
+@import '../header.scss';
+@import '../../mixins.scss';
+.card-header__location {
+    @extend .card-header;
+    @include headerColor(#b57a59);
+}

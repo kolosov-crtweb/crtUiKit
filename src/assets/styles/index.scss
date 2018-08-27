@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 @import './variables.scss';
 @import './cards/index.scss';
+@import './buttons/index.scss';
 body {
     font: 100% $font-stack;
     color: $primary-color;
@@ -8,10 +9,17 @@ body {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: space-around;
     background: linear-gradient(to top right, #170e19, #9f6aa1, #d4a6aa) no-repeat;
 }
 
 html body {
     height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+li {
+    color: $font-color;
 }

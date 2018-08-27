@@ -1,0 +1,54 @@
+@import '../variables.scss';
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+button {
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: $font-color;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button-primary {
+    border-top: $border-top;
+    background-color: #3e4e87;
+}
+
+.button-primary:hover {
+    background-color: #5f7dbe;
+}
+
+.button-info {
+    border-top: $border-top;
+    background-color: #416e8c;
+}
+
+.button-info:hover {
+    background-color: #71afd2;
+}
+
+.button-success {
+    border-top: $border-top;
+    background-color: #3a6f4e;
+}
+
+.button-success:hover {
+    background-color: #64b07d;
+}

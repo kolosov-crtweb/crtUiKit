@@ -1,0 +1,15 @@
+@import '../../variables.scss';
+.profile-header {
+    height: 150px;
+    border-top: $border-top;
+    z-index: 1;
+}
+
+.background-photo{
+    display: block;
+    object-fit: cover;
+    padding: none;
+    width: 100%;
+    height:100% ;
+    z-index: 0;
+}

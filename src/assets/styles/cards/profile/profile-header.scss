@@ -44,7 +44,18 @@
 .profile-name {
     font-weight: bold;
 }
-
+.profile-location {
+    font-size: 0.8em;
+    font-weight: 300;
+}
 .profile-location::before {
-
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 12px;
+    mask: url('./img/map.svg');
+    mask-size: cover;
+    background-color: #ffffff;
+    margin-right: 5px;
+    opacity: 0.8;
 }

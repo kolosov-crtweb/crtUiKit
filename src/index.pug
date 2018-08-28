@@ -27,13 +27,6 @@ html
                     .social-icon.facebook
                         include assets/img/facebook-f-brands.svg
         .card
-            .card-header__profile profile
-            .profile-header
-                img.background-photo(src=("/img/bg.png"))
-                image.profile-photo(src="")
-                .profile-name John Doe
-                .profile-location New York, NY
-        .card
             .card-header__download DOWNLOAD
             .body__download
                 .main-circle
@@ -51,3 +44,18 @@ html
             button.button-primary(onclick='buttonClick()') Button
             button.button-info(onclick='buttonClick()') Button
             button.button-success(onclick='buttonClick()') Button
+        .card
+            .card-header__profile profile
+            .profile-header
+                img.background-photo(src=("/img/bg.png"))
+                .profile-container 
+                    image.profile-photo(src="/img/photo.png")
+                    .info-container
+                        .profile-name John Doe
+                        .profile-location New York, NY
+            .profile-body
+                .statistic
+                    .following 345
+                    .line
+                    .followers 498
+                button follow

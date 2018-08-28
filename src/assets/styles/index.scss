@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 @import './variables.scss';
 @import './cards/index.scss';
 @import './buttons/index.scss';
@@ -10,7 +10,12 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: space-around;
-    background: linear-gradient(to top right, #170e19, #9f6aa1, #d4a6aa) no-repeat;
+    background: linear-gradient(to top right, #170e19, #9f6aa1, #d4a6aa);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
 }
 
 html body {
@@ -20,6 +25,7 @@ html body {
 ul {
     list-style: none;
 }
+
 li {
     color: $font-color;
 }

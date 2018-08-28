@@ -1,9 +1,8 @@
 @import '../variables.scss';
-
+@import '../mixins.scss';
 .button-container {
     display: flex;
     flex-direction: column;
-    
 }
 
 button {
@@ -23,6 +22,7 @@ button {
 }
 
 button:hover {
+    @include hoverTransition();
     background-color: rgba(255, 255, 255, 0.5);
 }
 

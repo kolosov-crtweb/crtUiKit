@@ -1,0 +1,44 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+.profile-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $font-color;
+}
+
+.statistic {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    justify-content: space-around;
+}
+
+.followers,
+.following {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.8em;
+    font-weight: 300;
+}
+
+.following::before,
+.followers::before {
+    font-size: .5em;
+}
+
+.following::before {
+    content: 'Following';
+}
+
+.followers::before {
+    content: 'Followers';
+}
+.line {
+    height: 75px;
+    border-left: 1px solid $border-color;
+}

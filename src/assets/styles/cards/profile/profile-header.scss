@@ -3,13 +3,48 @@
     height: 150px;
     border-top: $border-top;
     z-index: 1;
+    position: relative;
+    color: $font-color;
+    border-top: 1px solid $border-color
 }
 
-.background-photo{
+.background-photo {
+    filter: brightness(50%);
     display: block;
-    object-fit: cover;
-    padding: none;
+    position: relative;
+    object-fit: fill;
+    height: 100%;
     width: 100%;
-    height:100% ;
-    z-index: 0;
+}
+
+.profile-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 30px;
+    left: 30px;
+}
+
+.profile-photo {
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: 4px solid rgba($color: #ffffff, $alpha: 0.4)
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.profile-name {
+    font-weight: bold;
+}
+
+.profile-location::before {
+
 }

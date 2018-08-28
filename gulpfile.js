@@ -3,6 +3,8 @@ var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var plumber = require('gulp-plumber');
+var autoprefixer = require('gulp-autoprefixer');
+var cssnano = require('gulp-cssnano');
 
 gulp.task('browserSync', function () {
     browserSync({
@@ -23,6 +25,10 @@ gulp.task('sass', function () {
     return gulp.src('src/assets/styles/**/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(plumber())
+        .pipe(autoprefixer())
+        .pipe(cssnano({
+            zindex: false
+        }))
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.reload({ stream: true }))
 });

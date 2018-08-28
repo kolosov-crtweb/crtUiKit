@@ -35,10 +35,12 @@ $input-active-color: rgba(255, 255, 255, 0.6);
 }
 
 .login-input:focus {
+    @include hoverTransition();
     background-color: $input-active-color
 }
 
 .login-input:hover {
+    @include hoverTransition();
     background-color: $input-active-color
 }
 

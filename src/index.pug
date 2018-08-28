@@ -37,8 +37,12 @@ html
                     .state Complete...
         .card
             .card-header__location LOCATION
-            ul
-                li.location San Francisco
+            ul.location-list
+                li
+                    .location San Francisco
+                    .location-checkbox
+                        span
+                            input(type="checkbox")
         .button-container
             button(onclick='buttonClick()') Button
             button.button-primary(onclick='buttonClick()') Button

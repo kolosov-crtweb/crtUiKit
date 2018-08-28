@@ -1,7 +1,45 @@
 @import '../../variables.scss';
-li,
-.location {
-    list-style-image: url("./src/assets/img/map-marker-alt-solid.svg");
+.location-list {
+    margin: 0px;
 }
 
-//TODO доделать
+.location-list>li {
+    height: 60px;
+    list-style-image: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location::before {
+    vertical-align: -25%;
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 20px;
+    mask: url('./img/map.svg');
+    mask-size: cover;
+    background-color: #ffffff;
+    margin-right: 10px;
+    opacity: 0.8;
+}
+
+.location-checkbox {
+    width: 60px;
+    height: 60px;
+    border-left: 1px solid $border-color;
+    display: flex;
+}
+
+.location-checkbox>span {
+    background-image: url('./img/checkBox.png');
+    width: 24px;
+    height: 24px;
+    margin: auto;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer
+}

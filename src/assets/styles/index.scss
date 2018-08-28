@@ -9,7 +9,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-items: space-around;
+    align-content: flex-start;
     background: linear-gradient(to top right, #170e19, #9f6aa1, #d4a6aa);
     background-position: center center;
     background-repeat: no-repeat;

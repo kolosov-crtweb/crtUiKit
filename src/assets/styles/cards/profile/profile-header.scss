@@ -1,8 +1,6 @@
 @import '../../variables.scss';
 .profile-header {
     height: 150px;
-    border-top: $border-top;
-    z-index: 1;
     position: relative;
     color: $font-color;
     border-top: 1px solid $border-color
@@ -14,7 +12,9 @@
     position: relative;
     object-fit: fill;
     height: 100%;
-    width: 100%;
+    width: 302px;
+    margin-left: -1px;
+    margin-right: -1px;
 }
 
 .profile-container {
@@ -44,10 +44,12 @@
 .profile-name {
     font-weight: bold;
 }
+
 .profile-location {
     font-size: 0.8em;
     font-weight: 300;
 }
+
 .profile-location::before {
     content: '';
     display: inline-block;

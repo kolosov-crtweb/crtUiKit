@@ -3,7 +3,7 @@
 @import './download/download-card.scss';
 @import './location/location-card.scss';
 @import './profile/profile-card.scss';
-
+@import './reciept-details/reciept-details-card.scss';
 .card {
     width: $card-width;
     background-color: rgba($color: $background-color, $alpha: 0.1);

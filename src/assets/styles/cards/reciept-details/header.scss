@@ -1,0 +1,48 @@
+@import '../../variables.scss';
+.recipe-details__header {
+    height: 190px;
+    position: relative;
+    color: $font-color;
+}
+
+.recipe-details__header>img {
+    border-top: $border-top;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    color: $font-color;
+    filter: brightness(60%);
+    display: block;
+    position: relative;
+    object-fit: fill;
+    height: 100%;
+    width: 302px;
+    margin-left: -1px;
+    margin-right: -1px;
+}
+
+.recipe-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: 125px;
+    left: 30px;
+}
+
+.recipe-category {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.recipe-name {
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.recipe-info,
+.recipe-name {
+    letter-spacing: 2px;
+    line-height: 22px;
+    text-shadow: 1px 1.732px 5px #000000;
+}

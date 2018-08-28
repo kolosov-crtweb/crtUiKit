@@ -1,0 +1,81 @@
+@import '../../variables.scss';
+.recipe-details-list {
+    padding-left: 0;
+    margin: 0;
+}
+
+.recipe-details-list>li {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe-details-list>li {
+    border-left: 5px solid transparent;
+    width: 295px;
+    border-top: 1px solid $border-color;
+}
+
+.recipe-details-list>li:hover {
+    border-left: 5px solid white;
+    background-color: rgba($color: #ffffff, $alpha: .1)
+}
+
+.recipe-details-list>li:nth-last-child(1):hover {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+
+.recipe-details-list>li::before {
+    padding-left: 15px;
+}
+
+.recipe-details-list>li::after {
+    content: '';
+    display: inline-block;
+    margin-right: 15px;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    filter: brightness(1);
+    justify-self: space-between;
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.recipe-settings::before {
+    content: 'Settings';
+}
+
+.recipe-settings::after {
+    mask-image: url('./img/settings.svg');
+}
+
+.recipe-location::before {
+    content: 'Location';
+}
+
+.recipe-location::after {
+    mask-image: url('./img/map.svg');
+}
+
+.recipe-favourite::before {
+    content: 'Favourite'
+}
+
+.recipe-favourite::after {
+    mask-image: url('./img/favourite.svg');
+}
+
+.recipe-food::before {
+    content: 'Food'
+}
+
+.recipe-food::after {
+    mask-image: url('./img/food.svg');
+}

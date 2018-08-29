@@ -6,7 +6,6 @@
 }
 
 .recipe-details__header>img {
-    border-top: $border-top;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
     color: $font-color;
@@ -15,7 +14,7 @@
     position: relative;
     object-fit: fill;
     height: 100%;
-    width: 302px;
+    width: 300px;
     margin-left: -1px;
     margin-right: -1px;
 }

@@ -11,26 +11,20 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-
-.recipe-details-list>li {
-    border-left: 5px solid transparent;
-    width: 295px;
-    border-top: 1px solid $border-color;
+    text-transform: capitalize;
 }
 
 .recipe-details-list>li:hover {
-    border-left: 5px solid white;
     background-color: rgba($color: #ffffff, $alpha: .1)
 }
 
-.recipe-details-list>li:nth-last-child(1):hover {
-    border-bottom-left-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
-}
-
 .recipe-details-list>li::before {
-    padding-left: 15px;
+    content: '';
+    display: block;
+    width: 5px;
+    height: 60px;
+    background-color: transparent;
+    margin: -1px 0 -1px -1px;
 }
 
 .recipe-details-list>li::after {
@@ -40,7 +34,6 @@
     opacity: 0.8;
     background-repeat: no-repeat;
     filter: brightness(1);
-    justify-self: space-between;
     width: 25px;
     height: 25px;
     background-color: #ffffff;
@@ -48,8 +41,8 @@
     mask-position: center;
 }
 
-.recipe-settings::before {
-    content: 'Settings';
+.recipe-details-list>li:hover::before {
+    background-color: #ffffff;
 }
 
 .recipe-settings::after {
@@ -57,7 +50,7 @@
 }
 
 .recipe-location::before {
-    content: 'Location';
+    content: '';
 }
 
 .recipe-location::after {
@@ -65,7 +58,7 @@
 }
 
 .recipe-favourite::before {
-    content: 'Favourite'
+    content: ''
 }
 
 .recipe-favourite::after {
@@ -73,9 +66,27 @@
 }
 
 .recipe-food::before {
-    content: 'Food'
+    content: ''
 }
 
 .recipe-food::after {
     mask-image: url('./img/food.svg');
+}
+
+.li-diff-line {
+    border-top: 1px solid $border-color;
+}
+
+.recipe-details-list>li:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.recipe-details-list>li:last-child::before {
+    border-bottom-left-radius: 30px;
+}
+
+.captionLi {
+    margin-left: 10px;
+    width: 200px;
 }

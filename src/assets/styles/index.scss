@@ -2,6 +2,14 @@
 @import './variables.scss';
 @import './cards/index.scss';
 @import './buttons/index.scss';
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+*:hover{
+    transition: 0.3s;
+}
 body {
     font: 100% $font-stack;
     color: $primary-color;
@@ -15,7 +23,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    
 }
 
 html body {

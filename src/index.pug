@@ -4,7 +4,9 @@ html
     style
         include ../dist/index.css
     script.
-        var buttonClick = function(){console.log('button click')}
+      var buttonClick = function () {
+        console.log('button click')
+      }
     meta(charset = 'utf-8')
     meta(name='viewport', content="initial-scale=1.0, width=device-width")
     title gulp
@@ -12,10 +14,10 @@ html
         .card
             .card-header__login LOGIN
             .login__body
-                .input-container 
+                .input-container
                     label(for="email") Email
                     input(id="email" type="email" class="login-input")
-                .input-container 
+                .input-container
                     label(for="password") Password
                     input(id="password" type="password" class="login-input")
                 .or-text   Or  
@@ -52,7 +54,7 @@ html
             .card-header__profile profile
             .profile-header
                 img.background-photo(src=("/img/bg.png"))
-                .profile-container 
+                .profile-container
                     image.profile-photo(src="/img/photo.png")
                     .info-container
                         .profile-name John Doe
@@ -70,14 +72,14 @@ html
                     .recipe-category home-made
                     .recipe-name apple pie
             ul.recipe-details-list
-                li.recipe-settings 
+                li.recipe-settings
                     .captionLi settings
                 .li-diff-line
-                li.recipe-location 
+                li.recipe-location
                     .captionLi location
                 .li-diff-line
-                li.recipe-favourite 
+                li.recipe-favourite
                     .captionLi favourite
                 .li-diff-line
-                li.recipe-food 
+                li.recipe-food
                     .captionLi food
